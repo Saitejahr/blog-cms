@@ -37,7 +37,7 @@ const BlogPostForm = () => {
       setError('')
       toast.success('Post Created successfully!')
 
-      navigate('/')
+      navigate('/bloglist')
     } catch (error) {
       setError(error.response?.data.message || 'Error creating post')
     }

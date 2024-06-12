@@ -92,6 +92,7 @@ const BlogPostList = () => {
         <button onClick={logout}>Logout</button>
       </div>
       <h1 className="blog-title">Blog Posts</h1>
+      
       <div className="blog-posts-grid">
         {posts.map((post) => (
           <div key={post._id} className="blog-post">

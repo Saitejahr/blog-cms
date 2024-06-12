@@ -12,6 +12,7 @@ exports.verifyToken = (req, res, next) => {
   }
 }
 
+
 // Middleware to check admin authentication
 exports.checkAdminAuth = (req, res, next) => {
   jwt.verify(req.token, 'secretkey', (err, authData) => {

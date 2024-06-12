@@ -7,18 +7,29 @@ import LoginForm from './components/LoginForm'
 import RegisterForm from './components/RegisterForm'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import ViewPost from './components/ViewPost'
+import BlogData from './components/BlogData'
 
 const App = () => {
+  // const [token,setToken] = useState()
+
+  // useEffect(() => {
+  //   const tokenValue = localStorage.getItem('token')
+  //   setToken(tokenValue)
+  // },[])
   return (
     <Router>
       <div>
         <Header />
         <Routes>
-          <Route exact path="/" element={<BlogPostList />} />
+          <Route exact path="/" element={ <ViewPost />} />
           <Route path="/admin/register" element={<RegisterForm />} />
           <Route path="/admin/login" element={<LoginForm />} />
           <Route path="/admin/create" element={<BlogPostForm />} />
+          <Route path="/bloglist" element={<BlogPostList />}  />
+          <Route path="/blogdata" element={<BlogData />} />
         </Routes>
+        
         <ToastContainer />
       </div>
     </Router>

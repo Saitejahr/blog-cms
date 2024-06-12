@@ -34,7 +34,7 @@ const LoginForm = () => {
       setPassword('')
       setError('')
       toast.success('User logged in successfully!')
-      navigate('/')
+      navigate('/bloglist')
     } catch (error) {
       setError('Invalid username or password')
     }

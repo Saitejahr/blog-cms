@@ -1,4 +1,4 @@
-.data-container{ 
+/* .data-container{ 
     margin: 30px;
     display: flex;
     flex-direction: column;
@@ -17,4 +17,18 @@ h1 .data-heading{
 }
 .data-para{
     text-align: justify;
+} */
+
+.data-container{ 
+    margin: 30px;
+    
+}
+
+.data-flex{
+    display: flex;
+}
+
+.data-image{
+    width: 600px;
+    
 }

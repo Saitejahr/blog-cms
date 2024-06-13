@@ -15,6 +15,11 @@
     flex-direction: column;
     align-items: center;
     cursor: pointer;
+    
+  }
+
+  a{
+    text-decoration: none;
   }
   .blog-posts-grid {
     display: grid;
@@ -25,6 +30,7 @@
   .blog-post-title {
     font-size: 1.5em;
     margin-bottom: 10px;
+    
   }
   
   .blog-post-content {

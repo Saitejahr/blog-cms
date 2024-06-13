@@ -1,0 +1,37 @@
+.data-containers {
+    margin: auto;
+    max-width: 80%; /* Adjust as needed */
+    padding: 20px;
+  }
+  
+.data-first{
+    display: flex;
+       
+}
+.flex-img{
+    width: 40%;
+    margin: 10px;
+}
+
+.flex-head{
+    width: 60%;
+    margin: 10px;    
+}
+.data-img{
+    width: 100%;
+    height: 100%;
+}
+.data-paragraph{
+    text-align: justify;
+}
+
+.data-second{ 
+    margin: auto;
+    width: 70%;
+}
+
+.data-images{
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}

@@ -9,6 +9,7 @@ import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import ViewPost from './components/ViewPost'
 import BlogData from './components/BlogData'
+import BlogFlexData from './components/BlogFlexData'
 
 const App = () => {
   // const [token,setToken] = useState()
@@ -28,6 +29,7 @@ const App = () => {
           <Route path="/admin/create" element={<BlogPostForm />} />
           <Route path="/bloglist" element={<BlogPostList />}  />
           <Route path="/blogdata" element={<BlogData />} />
+          <Route path="/blogflexdata" element={<BlogFlexData />} />
         </Routes>
         
         <ToastContainer />

@@ -12,12 +12,7 @@ import BlogData from './components/BlogData'
 import BlogFlexData from './components/BlogFlexData'
 
 const App = () => {
-  // const [token,setToken] = useState()
 
-  // useEffect(() => {
-  //   const tokenValue = localStorage.getItem('token')
-  //   setToken(tokenValue)
-  // },[])
   return (
     <Router>
       <div>

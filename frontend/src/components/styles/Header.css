@@ -51,9 +51,9 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
-  width: 200px; /* Adjust as needed to control spacing */
+  width: 200px; 
 }
 
 .admin-options .nav-item {
-  margin: 0; /* Ensure no extra margin on admin items */
+  margin: 0; 
 }

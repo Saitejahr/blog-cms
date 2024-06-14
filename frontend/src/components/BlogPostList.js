@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import './styles/BlogPostList.css' // Import the CSS file
+import './styles/BlogPostList.css' 
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 const BlogPostList = () => {

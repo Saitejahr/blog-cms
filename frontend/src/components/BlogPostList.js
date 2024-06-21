@@ -81,6 +81,10 @@ const BlogPostList = () => {
     }))
   }
 
+  const handlePostClick = (postId) => {
+    navigate(`/admin/posts/${postId}`);
+  };
+
   const handleCreateBlog = () => {
     navigate('/admin/create')
   }
@@ -93,7 +97,7 @@ const BlogPostList = () => {
       </div>
       <h1 className="blog-title">Blog Posts</h1>
       
-      <div className="blog-posts-grid">
+      <div  className="blog-posts-grid">
         {posts.map((post) => (
           <div key={post._id} className="blog-post">
             {editingPost === post._id ? (
@@ -124,10 +128,10 @@ const BlogPostList = () => {
               </div>
             ) : (
               <div>
-                <h2 className="blog-post-title">{post.title}</h2>
+                <h2 key={post._id} onClick={() => handlePostClick(post._id)} className="blog-post-title pointer">{post.title}</h2>
                 <p className="blog-post-content">{post.content}</p>
-                <img
-                  className="blog-post-image"
+                <img key={post._id} onClick={() => handlePostClick(post._id)}
+                  className="blog-post-image pointer"
                   src={`http://localhost:5001/${post.image.replace(
                     /\\/g,
                     '/'

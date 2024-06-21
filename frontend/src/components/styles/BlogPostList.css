@@ -31,6 +31,9 @@
   flex-direction: column;
   align-items: center;
 }
+.pointer{
+  cursor: pointer;
+}
 
 .blog-post-title {
   font-size: 1.5em;

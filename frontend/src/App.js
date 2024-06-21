@@ -11,6 +11,10 @@ import ViewPost from './components/ViewPost'
 import BlogData from './components/BlogData'
 import BlogFlexData from './components/BlogFlexData'
 
+import Template2 from './components/Template2'
+import BlogPostDetail from './components/BlogPostDetails'
+import Template1 from './components/Template1'
+
 const App = () => {
 
   return (
@@ -25,6 +29,9 @@ const App = () => {
           <Route path="/bloglist" element={<BlogPostList />}  />
           <Route path="/blogdata" element={<BlogData />} />
           <Route path="/blogflexdata" element={<BlogFlexData />} />
+          <Route path="/template1" element={<Template1 />}/>
+          <Route path="/template2" element={<Template2 />}/>
+          <Route path="/admin/posts/:postId" element={<BlogPostDetail />} />
         </Routes>
         
         <ToastContainer />

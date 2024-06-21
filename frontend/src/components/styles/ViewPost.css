@@ -5,7 +5,7 @@
     font-family: Arial, sans-serif;
   }
 
-.blog-post {
+.blog-posts {
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 8px;
@@ -16,7 +16,7 @@
     align-items: center;
     cursor: pointer;
     
-  }
+}
 
   a{
     text-decoration: none;

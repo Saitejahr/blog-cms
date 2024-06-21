@@ -21,14 +21,14 @@ exports.createPost = async (req, res) => {
   try {
     console.log('Request body:', req.body)
     console.log('File info:', req.file)
-    const { title, content } = req.body
+    const { title, content,template } = req.body
     let imageUrl = ''
 
     if (req.file) {
       imageUrl = req.file.path
     }
 
-    const newPost = new Post({ title, content, image: imageUrl })
+    const newPost = new Post({ title, content, image: imageUrl,template })
     await newPost.save()
 
     res.status(201).json(newPost)

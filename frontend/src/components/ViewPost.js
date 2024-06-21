@@ -11,7 +11,7 @@ const ViewPost = () => {
               {Data.map((data) => (
                 data.id % 2 === 0 ?
                 <NavLink to='/blogdata'>
-                  <div  key={data.id} className="blog-post">                 
+                  <div  key={data.id} className="blog-posts">                 
                     <h2 className="blog-post-title">{data.title}</h2>
                     <p className="blog-post-content">{data.content}</p>
                     <img
@@ -21,7 +21,7 @@ const ViewPost = () => {
                     />               
                   </div>
                 </NavLink> : <NavLink to='/blogflexdata'>
-                  <div  key={data.id} className="blog-post">                 
+                  <div  key={data.id} className="blog-posts">                 
                     <h2 className="blog-post-title">{data.title}</h2>
                     <p className="blog-post-content">{data.content}</p>
                     <img

@@ -50,7 +50,7 @@ const BlogPostList = () => {
       title: post.title,
       content: post.content,
       image: post.image,
-      template: post.template, // Set template field from post data
+      template: post.template,
     });
   };
 

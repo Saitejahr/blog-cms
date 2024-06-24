@@ -43,6 +43,7 @@
 .blog-post-content {
   font-size: 1em;
   margin-bottom: 20px;
+  text-align: justify;
 }
 
 .blog-post-image {

@@ -15,7 +15,7 @@ const BlogPostDetail = () => {
   const fetchPost = async () => {
     try {
       const response = await axios.get(`http://localhost:5001/api/${postId}`);
-      console.log(response.data)
+     
       setPost(response.data);
     } catch (error) {
       console.error('Error fetching post:', error.message);

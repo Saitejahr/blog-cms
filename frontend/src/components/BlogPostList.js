@@ -12,6 +12,8 @@ const BlogPostList = () => {
     image: '',
   })
 
+
+  
   const navigate = useNavigate()
   useEffect(() => {
     fetchPosts()
@@ -128,9 +130,9 @@ const BlogPostList = () => {
               </div>
             ) : (
               <div>
-                <h2 key={post._id} onClick={() => handlePostClick(post._id)} className="blog-post-title pointer">{post.title}</h2>
+                <h2 onClick={() => handlePostClick(post._id)} className="blog-post-title pointer">{post.title}</h2>
                 <p className="blog-post-content">{post.content}</p>
-                <img key={post._id} onClick={() => handlePostClick(post._id)}
+                <img onClick={() => handlePostClick(post._id)}
                   className="blog-post-image pointer"
                   src={`http://localhost:5001/${post.image.replace(
                     /\\/g,
@@ -162,3 +164,4 @@ const BlogPostList = () => {
 }
 
 export default BlogPostList
+

@@ -9,18 +9,19 @@ const BlogPostDetail = () => {
   const [post, setPost] = useState(null);
 
   useEffect(() => {
-    fetchPost();
-  }, []);
+    const fetchPost = async () => {
+      try {
+        const response = await axios.get(`http://localhost:5001/api/${postId}`);
+        setPost(response.data);
+      } catch (error) {
+        console.error('Error fetching post:', error.message);
+      }
+    };
 
-  const fetchPost = async () => {
-    try {
-      const response = await axios.get(`http://localhost:5001/api/${postId}`);
-     
-      setPost(response.data);
-    } catch (error) {
-      console.error('Error fetching post:', error.message);
-    }
-  };
+    fetchPost(); // Call fetchPost directly inside useEffect
+
+    // No dependencies in the array to avoid unnecessary re-renders
+  }, [postId]); // Include postId in the dependency array if it changes
 
   if (!post) {
     return <div>Loading...</div>;
@@ -30,7 +31,6 @@ const BlogPostDetail = () => {
     <div>
       {post.template === 'Template1' && <Template1 title={post.title} content={post.content} image={post.image} />}
       {post.template === 'Template2' && <Template2 title={post.title} content={post.content} image={post.image} />}
-      
     </div>
   );
 };

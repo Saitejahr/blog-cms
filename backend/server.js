@@ -16,6 +16,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')))
 app.use('/api', postRoutes)
 app.use('/api/admin', adminRoutes)
 
+
 // MongoDB connection
 mongoose
   .connect(process.env.MONGODB_URI, {

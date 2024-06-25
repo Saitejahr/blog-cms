@@ -5,17 +5,23 @@ import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 import './styles/BlogPostForm.css';
+import Template1 from './Template1';
+import Template2 from './Template2';
 
 const BlogPostForm = () => {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const [image, setImage] = useState(null);
+  
   const [selectedTemplate, setSelectedTemplate] = useState(null);
+
+  
   const [error, setError] = useState('');
+  
   const navigate = useNavigate();
 
 
-  
+  console.log(selectedTemplate)
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -56,16 +62,22 @@ const BlogPostForm = () => {
 
   const handleTemplateSelect = (template) => {
     setSelectedTemplate(template);
+    
   };
+
+
 
   return (
     <div>
-      <button className='button-block' onClick={() => handleTemplateSelect('Template1')}>
-        Template1
-      </button>
-      <button className='button-block' onClick={() => handleTemplateSelect('Template2')}>
+      <div>
+        <button className='button-block' onClick={() => handleTemplateSelect('Template1')}>
+          Template1
+        </button>
+        <button className='button-block' onClick={() => handleTemplateSelect('Template2')}>
         Template2
-      </button>
+        </button>
+      </div>
+
       <div className="form-container">
         <h2>Create New Post</h2>
         <form onSubmit={handleSubmit}>
@@ -94,6 +106,8 @@ const BlogPostForm = () => {
           {error && <p className="error-message">{error}</p>}
         </form>
       </div>
+      {selectedTemplate === 'Template1' && <Template1 title={title} content={content} image={image} />}
+      {selectedTemplate === 'Template2' && <Template2 title={title} content={content} image={image} />}
       
     </div>
   );

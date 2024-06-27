@@ -10,7 +10,7 @@
 .logo {
   font-size: 40px;
   text-decoration: none !important;
-
+  display: block !important;
   margin: 0;
 }
 .logo:hover{

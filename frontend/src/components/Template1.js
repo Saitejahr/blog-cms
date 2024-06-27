@@ -4,7 +4,7 @@ import React from 'react';
 import './styles/BlogFlexData.css';
 
 const Template1 = ({ title, content, image }) => {
-  console.log(title, content, image);
+
 
   let imageUrl = '';
 

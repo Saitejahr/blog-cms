@@ -44,3 +44,7 @@ exports.register = async (req, res) => {
     res.status(500).json({ message: 'Internal server error' })
   }
 }
+
+exports.logout = async (req,res) => {
+  res.status(200).json({message: 'Logged out successfully'})
+}

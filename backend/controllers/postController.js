@@ -89,6 +89,9 @@ exports.deletePostById = async (req, res) => {
     if (!post) {
       return res.status(404).json({ message: 'Post not found' });
     }
+    
+
+
 
     // Delete image file
     if (post.image) {

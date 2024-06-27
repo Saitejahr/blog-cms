@@ -15,6 +15,7 @@ import Template2 from './components/Template2'
 import BlogPostDetail from './components/BlogPostDetails'
 import Template1 from './components/Template1'
 
+
 const App = () => {
 
   return (
@@ -34,7 +35,8 @@ const App = () => {
           <Route path="/admin/posts/:postId" element={<BlogPostDetail />} />
         </Routes>
         
-        <ToastContainer />
+        <ToastContainer autoClose={500} />
+        
       </div>
     </Router>
   )

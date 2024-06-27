@@ -18,10 +18,10 @@ const BlogPostDetail = () => {
       }
     };
 
-    fetchPost(); // Call fetchPost directly inside useEffect
+    fetchPost(); 
 
-    // No dependencies in the array to avoid unnecessary re-renders
-  }, [postId]); // Include postId in the dependency array if it changes
+    
+  }, [postId]); 
 
   if (!post) {
     return <div>Loading...</div>;

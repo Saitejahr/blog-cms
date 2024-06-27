@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './styles/Header.css'
 
+
 const Header = () => {
   const [showAdminOptions, setShowAdminOptions] = useState(false)
 
@@ -10,13 +11,14 @@ const Header = () => {
   }
 
   return (
-    <header className="header">
-      <h1 className="logo">My Blog</h1>
+    <div>
+      <header className="header">
+      
       <nav className="nav">
         <ul className="nav-list">
           <li className="nav-item">
             <Link to="/" className="nav-link">
-              Home
+            <h1 className="logo">My Blog</h1>
             </Link>
           </li>
           <li className="nav-item" onClick={toggleAdminOptions}>
@@ -41,6 +43,8 @@ const Header = () => {
         </div>
       )}
     </header>
+  
+    </div>
   )
 }
 

@@ -22,7 +22,9 @@
 }
 
 .blog-post {
-  background-color: #f9f9f9;
+  /* background-color: #f9f9f9; */
+  background-color: #4F1036;
+  
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -36,11 +38,13 @@
 }
 
 .blog-post-title {
+  color: #FFFFFF !important;
   font-size: 1.5em;
   margin-bottom: 10px;
 }
 
 .blog-post-content {
+  color: #FFFFFF !important;
   font-size: 1em;
   margin-bottom: 20px;
   text-align: justify;
@@ -65,31 +69,63 @@
   margin-top: 10px;
   border: none;
   border-radius: 4px;
-  background-color: #007bff;
+  /* background-color: #007bff; */
+  background-color: #000099;
   color: #fff;
   cursor: pointer;
   font-size: 1em;
 }
 
-.blog-button:hover {
-  background-color: #0056b3;
+.blog-edit-form {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.blog-edit-form input,
+.blog-edit-form input[type="text"],
 .blog-edit-form textarea {
-  display: block;
-  width: 80%;
-  margin: 0 auto 10px;
-  padding: 5px 10px;
-  font-size: 1em;
-  border: 1px solid #ddd;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.blog-edit-form textarea {
+  width: 95%;
+  height: 150px;
+}
+
+.blog-edit-form button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
   border-radius: 4px;
 }
 
-.blog-edit-form textarea {
-  resize: vertical;
-  height: 80px;
+.blog-edit-form button:hover {
+  background-color: #45a049;
 }
+
+.blog-edit-form input[type="text"]:focus,
+.blog-edit-form textarea:focus {
+  outline: none;
+  border-color: #4caf50;
+  
+}
+
+
+
 
 @media (max-width: 768px) {
   .blog-post-title {

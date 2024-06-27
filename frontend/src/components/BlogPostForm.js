@@ -20,9 +20,6 @@ const BlogPostForm = () => {
   
   const navigate = useNavigate();
 
-
-  console.log(selectedTemplate)
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 

@@ -43,8 +43,8 @@ const LoginForm = () => {
   return (
     <div className="login-container">
       <h2>Login</h2>
-      {error && <p>{error}</p>}
-      <form onSubmit={handleSubmit}>
+      {error && <p className='error-message'>{error}</p>}
+      <form onSubmit={handleSubmit} autoComplete="off">
         <div>
           <label htmlFor="username">Username:</label>
           <input

@@ -26,6 +26,7 @@
   
   .data-paragraph {
     text-align: justify;
+    color: #767370 !important;
   }
   
   .data-second {
@@ -33,6 +34,11 @@
     flex-wrap: wrap;
     margin: auto;
     width: 70%;
+    
+  }
+
+  .data-para{
+    color: #767370 !important;
   }
   
   .data-images {

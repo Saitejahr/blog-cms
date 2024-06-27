@@ -35,8 +35,8 @@ const RegisterForm = () => {
   return (
     <div className="register-container">
       <h2>Register</h2>
-      {message && <p>{message}</p>}
-      <form onSubmit={handleSubmit}>
+      {message && <p className='error-message'>{message}</p>}
+      <form onSubmit={handleSubmit} autoComplete="off">
         <div>
           <label htmlFor="username">Username:</label>
           <input

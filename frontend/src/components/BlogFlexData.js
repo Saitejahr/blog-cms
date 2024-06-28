@@ -29,10 +29,7 @@ const BlogFlexData = () => {
         </div>
       </div>
       <div className="data-second">
-        <div>
-          <img className="data-images" src={laptop} alt={laptop} />
-        </div>
-        <div>
+      <div>
           <h1 className="data-heading">MERN Stack Blog </h1>
           <p className="data-para">
             The MERN stack, comprising MongoDB, Express.js, React, and Node.js,
@@ -49,6 +46,10 @@ const BlogFlexData = () => {
             opportunities for those skilled in these technologies.
           </p>
         </div>
+        <div>
+          <img className="data-images" src={laptop} alt={laptop} />
+        </div>
+        
       </div>
     </div>
   )

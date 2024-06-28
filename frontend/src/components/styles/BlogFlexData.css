@@ -8,6 +8,10 @@
   .data-first {
     display: flex;
   }
+
+  .data-first h1{
+    text-align: start !important;
+  }
   
   .flex-img {
     width: 40%;
@@ -35,6 +39,10 @@
     margin: auto;
     width: 70%;
     
+  }
+
+ .data-second h1{
+    text-align: start !important;
   }
 
   .data-para{

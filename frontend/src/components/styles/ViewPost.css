@@ -12,7 +12,7 @@
 }
 .left-h1{
   margin: 0;
-  
+  display: inline-block !important;
   font-size: 30px;
 }
 .left-p{ 
@@ -102,4 +102,10 @@ a{
 
 .blog-button:hover {
   background-color: #0056b3;
+}
+
+@media (max-width: 490px) {
+  .left-p{ 
+    font-size: 10px !important;
+  }
 }

@@ -34,7 +34,8 @@ input[type='password'] {
   width: 100%;
   padding: 10px;
   font-size: 1em;
-  border: 1px solid #ddd;
+  border: 2px solid #F8F4F2 !important;
+  
   border-radius: 4px;
   margin-top: 5px;
   box-sizing: border-box;

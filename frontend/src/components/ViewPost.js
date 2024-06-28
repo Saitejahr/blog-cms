@@ -22,7 +22,7 @@ In our blog app, we've streamlined the process to make sharing your thoughts and
         <img src={laptop} alt='Laptop' />
         <div>
         <h1 className='left-h1'>Blog </h1>
-        <p className='left-p'>27 JUNE 2024  </p>
+        <p className='left-p'>27 JUNE 2024</p>
         </div>
          <br ></br>
         <img src={blog} alt='blog' />

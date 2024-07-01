@@ -33,6 +33,8 @@ const App = () => {
           <Route path="/template1" element={<Template1 />}/>
           <Route path="/template2" element={<Template2 />}/>
           <Route path="/admin/posts/:postId" element={<BlogPostDetail />} />
+          {/* <Route path="/datablog" element={<DataBlog />} />
+          <Route path="/dataflex" element={<DataFlex />} /> */}
         </Routes>
         
         <ToastContainer autoClose={500} />

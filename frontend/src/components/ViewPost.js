@@ -12,10 +12,10 @@ const ViewPost = () => {
     
     <div>
       <div>
-      <img className='blog-image' src={blogimage}  alt="blogimage"/>
+      <img  className='blog-image' src={blogimage}  alt="blogimage"/>
       <span className='image-h1'>Welcome to Blog App</span>
       <span className='image-p'>
-In our blog app, we've streamlined the process to make sharing your thoughts and ideas easier than ever. Once you click on 'Admin,' you can swiftly register or log in to gain access to your personal dashboard. From there, creating your own blog is just a click away with the 'Create a Blog' button. Choose from templates tailored to suit your needs, whether you're aiming for a sleek professional look or a cozy, personal feel. Editing and updating your blog is intuitive and user-friendly, allowing you to refine your content until it's just right.</span>
+            In our blog app, we've streamlined the process to make sharing your thoughts and ideas easier than ever. Once you click on 'Admin,' you can swiftly register or log in to gain access to your personal dashboard. From there, creating your own blog is just a click away with the 'Create a Blog' button. Choose from templates tailored to suit your needs, whether you're aiming for a sleek professional look or a cozy, personal feel. Editing and updating your blog is intuitive and user-friendly, allowing you to refine your content until it's just right.</span>
       </div>
       <div className='flex-container'>
       <div className='left-blog'>
@@ -68,3 +68,29 @@ In our blog app, we've streamlined the process to make sharing your thoughts and
 }
 
 export default ViewPost
+
+
+
+// // In this I want this code <NavLink to='/blogdata'>
+//               //     <div  key={data.id} className="blog-posts">                 
+//               //     <h2 className="blog-post-title">{data.title}</h2>
+//               //     <p className="blog-post-content">{data.content}</p>
+//               //     <img
+//               //         className="blog-post-image"
+//               //         src={data.img}
+//               //         alt="images"
+//               //     />               
+//               //   </div>
+//               // </NavLink> : <NavLink to='/blogflexdata'>
+//               //   <div  key={data.id} className="blog-posts">                 
+//               //     <h2 className="blog-post-title">{data.title}</h2>
+//               //     <p className="blog-post-content">{data.content}</p>
+//               //     <img
+//               //         className="blog-post-image"
+//               //         src={data.img}
+//               //         alt="images"
+//               //     />               
+//               //   </div>
+//               // </NavLink>  i want instead of i want like list with image title,content and it should be clickable
+
+

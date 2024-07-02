@@ -1,40 +1,45 @@
 
-.data-container {
+.node-container {
     margin: auto;
     max-width: 800px; 
     padding: 20px;
   }
   
-  .data-flex {
+  .node-flex {
     display: flex;
     margin-bottom: 30px; 
   }
   
-  .data-image-container {
+  .node-image-container {
     flex: 1;
   }
   
-  .data-image {
+  .node-image {
     max-width: 100%;
     height: 100%;
     
   }
 
-  .data-content {
+  .node-content {
     flex: 2;
     
   }
+
+  .node-head{
+    font-size: 30px;
+    text-align: start !important;
+  }
   
-  .data-heading {
-    font-size: 24px;
+  .node-heading {
+    font-size: 30px;
  
   }
   
-  .data-para {
+  .node-para {
     font-size: 16px;
     line-height: 1.6;
     text-align: justify;
     text-indent: 50px;
-    margin-bottom: 20px !important;
+    margin-bottom: 50px !important;
   }
   

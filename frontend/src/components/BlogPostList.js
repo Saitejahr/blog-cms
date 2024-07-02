@@ -24,7 +24,7 @@ const BlogPostList = () => {
 
   const logout = () => {
     axios
-      .post('http://localhost:5001/api/admin/logout')
+      .post(`${process.env.REACT_APP_SERVER_URL}/api/admin/logout`)
       .then(() => {
         localStorage.removeItem('token');
         toast.success('User Logout successfully!');
@@ -37,7 +37,7 @@ const BlogPostList = () => {
 
   const fetchPosts = async () => {
     try {
-      const response = await axios.get('http://localhost:5001/api/posts');
+      const response = await axios.get(`${process.env.REACT_APP_SERVER_URL}/api/posts`);
       setPosts(response.data);
     } catch (error) {
       console.error('Error fetching posts:', error.message);
@@ -56,7 +56,7 @@ const BlogPostList = () => {
 
   const handleSaveEdit = async (id) => {
     try {
-      await axios.put(`http://localhost:5001/api/${id}`, editedPost);
+      await axios.put(`${process.env.REACT_APP_SERVER_URL}/api/${id}`, editedPost);
       fetchPosts();
       toast.success('Post Updated successfully!');
       setEditingPost(null);
@@ -68,7 +68,7 @@ const BlogPostList = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5001/api/${id}`);
+      await axios.delete(`${process.env.REACT_APP_SERVER_URL}/api/${id}`);
       fetchPosts();
       toast.success('Post Deleted successfully!');
     } catch (error) {

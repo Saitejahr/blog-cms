@@ -1,13 +1,23 @@
 import React from 'react'
 import './styles/ViewPost.css'
-import laptop from './assests/laptop.jpg'
-import blog from './assests/blog.jpg'
+import reactimage from './assests/reactimage.jpg'
+import node from './assests/node.png'
 import blogimage from './assests/blogimage.jpg'
 import Data from './Data'
 import { NavLink } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const ViewPost = () => {  
-    
+    const navigate = useNavigate()
+
+    const handleReact = () => {
+      navigate('/reactblog')
+    }
+
+    const handleNode = () => {
+      navigate('/nodeblog')
+    }
+
   return ( 
     
     <div>
@@ -19,15 +29,15 @@ const ViewPost = () => {
       </div>
       <div className='flex-container'>
       <div className='left-blog'>
-        <img src={laptop} alt='Laptop' />
+        <img className='pointer' onClick={handleReact} src={reactimage} alt='react' />
         <div>
-        <h1 className='left-h1'>Blog </h1>
+        <h1 onClick={handleReact} className='left-h1 pointer'>Blog On React </h1>
         <p className='left-p'>27 JUNE 2024</p>
         </div>
          <br ></br>
-        <img src={blog} alt='blog' />
+        <img className='pointer' onClick={handleNode} src={node} alt='node' />
         <div>
-        <h1 className='left-h1'>Blog </h1>
+        <h1 onClick={handleNode} className='left-h1 pointer'>Blog on Node </h1>
         <p className='left-p'>27 JUNE 2024  </p>
         </div>
       </div>

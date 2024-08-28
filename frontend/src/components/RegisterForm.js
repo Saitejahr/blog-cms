@@ -18,7 +18,7 @@ const RegisterForm = () => {
     
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_SERVER_URL}/api/admin/register`,
+        'http://localhost:5002/api/admin/register',
         {
           username,
           password,

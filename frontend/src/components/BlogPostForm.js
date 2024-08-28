@@ -40,7 +40,7 @@ const BlogPostForm = () => {
         },
       };
 
-      await axios.post(`${process.env.REACT_APP_SERVER_URL}/api/posts`, formData, config);
+      await axios.post('http://localhost:5002/api/posts', formData, config);
 
       setTitle('');
       setContent('');

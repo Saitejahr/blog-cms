@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './styles/BlogPostList.css';
@@ -24,7 +22,7 @@ const BlogPostList = () => {
 
   const logout = () => {
     axios
-      .post(`${process.env.REACT_APP_SERVER_URL}/api/admin/logout`)
+      .post('http://localhost:5002/api/admin/logout')
       .then(() => {
         localStorage.removeItem('token');
         toast.success('User Logout successfully!');
@@ -37,7 +35,7 @@ const BlogPostList = () => {
 
   const fetchPosts = async () => {
     try {
-      const response = await axios.get(`${process.env.REACT_APP_SERVER_URL}/api/posts`);
+      const response = await axios.get('http://localhost:5002/api/posts');  
       setPosts(response.data);
     } catch (error) {
       console.error('Error fetching posts:', error.message);
@@ -56,7 +54,7 @@ const BlogPostList = () => {
 
   const handleSaveEdit = async (id) => {
     try {
-      await axios.put(`${process.env.REACT_APP_SERVER_URL}/api/${id}`, editedPost);
+      await axios.put(`http://localhost:5002/api/${id}`, editedPost);
       fetchPosts();
       toast.success('Post Updated successfully!');
       setEditingPost(null);
@@ -68,7 +66,7 @@ const BlogPostList = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`${process.env.REACT_APP_SERVER_URL}/api/${id}`);
+      await axios.delete(`http://localhost:5002/api/${id}`);
       fetchPosts();
       toast.success('Post Deleted successfully!');
     } catch (error) {
@@ -147,7 +145,7 @@ const BlogPostList = () => {
                 <img
                   onClick={() => handlePostClick(post._id)}
                   className="blog-post-image pointer"
-                  src={`http://localhost:5001/${post.image.replace(
+                  src={`http://localhost:5002/${post.image.replace(
                     /\\/g,
                     '/'
                   )}`}

@@ -10,7 +10,7 @@ const Template1 = ({ title, content, image }) => {
 
  
   if (typeof image === 'string' && image.match(/\.(jpeg|jpg|gif|png)$/)) {
-    imageUrl = `${process.env.REACT_APP_SERVER_URL}/${image.replace(/\\/g, '/')}`;
+    imageUrl = `http://localhost:5002/${image.replace(/\\/g, '/')}`;
   } else if (image instanceof File) {
     
     imageUrl = URL.createObjectURL(image);

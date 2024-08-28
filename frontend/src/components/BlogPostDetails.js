@@ -11,7 +11,7 @@ const BlogPostDetail = () => {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const response = await axios.get(`${process.env.REACT_APP_SERVER_URL}/api/${postId}`);
+        const response = await axios.get(`http://localhost:5002/api/${postId}`);
         setPost(response.data);
       } catch (error) {
         console.error('Error fetching post:', error.message);
